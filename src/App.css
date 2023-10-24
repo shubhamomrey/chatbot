@@ -39,12 +39,12 @@
   border-radius: 10px;
 }
 
-.react-chatbot-kit-chat-inner-container {
+/* .react-chatbot-kit-chat-inner-container {
   width: 350px;
   
-}
+} */
 
-.learning-options-container {
+/* .learning-options-container {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -56,4 +56,4 @@
   background: transparent;
   border: 1px solid green;
   margin: 3px;
-}
+} */
