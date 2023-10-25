@@ -13,9 +13,12 @@ function Datepicker(props) {
   };
 
   const handleConfirm = () => {
+    
     if (selectedDate && selectedTime) {
       // You can pass the selected date and time to the parent component or perform other actions.
       props.actions.afterSlotMessage(selectedDate, selectedTime);
+      console.log('Selected Date:', selectedDate);
+      console.log('Selected Time:', selectedTime);
     } else {
       alert('Please select both date and time');
     }
@@ -29,13 +32,17 @@ function Datepicker(props) {
     for (let i = 0; i < 3; i++) {
       const date = new Date();
       date.setDate(today.getDate() + i);
-
       const day = days[date.getDay()];
       const month = date.toLocaleString('default', { month: 'short' });
       const dayOfMonth = date.getDate();
 
       buttons.push(
-        <button key={i} onClick={() => handleDateClick(date)}>
+        <button
+        className='date-button'
+          // style={buttonStyle}
+          key={i}
+          onClick={() => handleDateClick(date)}
+        >
           {`${dayOfMonth} ${month}, ${day}`}
         </button>
       );
@@ -46,7 +53,17 @@ function Datepicker(props) {
 
   const renderTimeButtons = (times) => {
     return times.map((time) => (
-      <button key={time} onClick={() => handleTimeClick(time)}>
+      <button
+        style={{
+          width: 59,
+          margin: 10,
+          borderRadius: 10,
+          backgroundColor: selectedTime === time ? '#00afd4' : 'white',
+          color: selectedTime === time ? "white" : 'black',
+        }}
+        key={time}
+        onClick={() => handleTimeClick(time)}
+      >
         {time}
       </button>
     ));
@@ -70,7 +87,9 @@ function Datepicker(props) {
           </div>
         </div>
       </div>
-      <button onClick={handleConfirm}>Confirm</button>
+      <div className='start-div'>
+        <button className='date-btn' onClick={handleConfirm}>Confirm</button>
+      </div>
     </div>
   );
 }

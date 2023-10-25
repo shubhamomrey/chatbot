@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FinalResult = (props) => {
-   
+const FinalResult = () => {
 
   return (
     <div>
-        <h1>Thank you</h1>
-       
+      <h2>You may now exit</h2>
+      <Link to="/"><button className='exit-btn'>Home Page</button></Link>
     </div>
   );
 }
 
 export default FinalResult;
+

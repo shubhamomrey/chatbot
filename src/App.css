@@ -34,26 +34,64 @@
   background-color: white;
   border: 2px solid #00afd4;
   color: #00afd4;
-  width: 100px;
-  height: 40px;
+  width: 60px;
+  height: 35px;
   border-radius: 10px;
 }
-
-/* .react-chatbot-kit-chat-inner-container {
-  width: 350px;
+.start-btn:hover {
+  background-color: #00afd4;
+  color: white;
+  border-color: black;
+}
+.react-chatbot-kit-chat-inner-container {
+  width: 300px;
   
-} */
-
-/* .learning-options-container {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 
-.learning-option-button {
-  padding: 0.5rem;
-  border-radius: 25px;
-  background: transparent;
-  border: 1px solid green;
-  margin: 3px;
-} */
+.exit-btn {
+   width: 110px;
+   height: 40px;
+   margin-top: 20px;
+   margin-left: 40px;
+   font-size: 1.1rem;
+   border-radius: 10px;
+  
+}
+.enroll-btn {
+   width: 150px;
+   height: 40px;
+   margin-left: 150px;
+   font-size: 1.5rem;
+   border-radius: 10px;
+   transition-duration: 5s;
+}
+.enroll-btn:hover{
+  color: white;
+  border-radius: 10px;
+  box-shadow: 90px 40px gray inset;
+  border: 2px solid white ;
+  
+}
+.date-btn {
+  background-color: white;
+  border: 2px solid #00afd4;
+  color: #00afd4;
+  border-radius: 10px;
+  width: 60px;
+  height: 35px;
+  margin: 10px;
+}
+.date-btn:hover {
+  background-color: #00afd4;
+  color: white;
+  border-color: black;
+}
+.date-button{
+  width: 60px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.date-button:focus{
+  background-color: #00afd4;
+  color: white;
+}

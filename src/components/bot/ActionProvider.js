@@ -18,8 +18,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     updateState(message, "age")
 }
 
-const finalMessage = (name,age) => {
-  const message = createChatBotMessage(name + " Thank you " + age);
+const finalMessage = (userData) => { // Accept userData as a parameter
+  console.log("Age:", userData.age);
+  console.log("Name:", userData.name);
+  const message = createChatBotMessage(`Your name ${userData.name} aged ${userData.age} has been added to student system`);
   updateState(message); 
 }
 

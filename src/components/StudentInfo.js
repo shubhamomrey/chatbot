@@ -5,8 +5,9 @@ function StudentInfo() {
   return (
     <div>
         <h1>Enter into Student Info System</h1>
+        
         <Link to="/chatbot">
-        <button>Enroll Now!</button>
+        <button className='enroll-btn'>Enroll Now!</button>
         </Link>
     </div>
   )
